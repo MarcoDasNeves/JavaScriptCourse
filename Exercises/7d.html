@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      function convertToFahrenheit(celsius) {
+        return celsius * 9 / 5 + 32 + 'F';
+      }
+      console.log(convertToFahrenheit(25))
+
+      function convertToCelsius(fahrenheit) {
+        return ((fahrenheit - 32) * 5 / 9) + 'C';
+      }
+      console.log(convertToCelsius(86))
+
+      /*
+      function convertTemperature(degrees, unit) {
+        unit === 'C' ? 
+        convertToFahrenheit(celsius = degrees) : unit === 'F' ?
+        convertToCelsius(fahrenheit = degrees) : ''
+      }
+      convertTemperature(32, 'C')
+      */
+
+      function convertTemperature(degrees, unit) {
+        const result =
+        unit === 'C' ?
+        convertToFahrenheit(degrees) :
+        unit === 'F' ?
+        convertToCelsius(degrees) : 'Insert a valid unit (C or F).';
+
+        return result;
+      }
+      console.log(convertTemperature(32, 'F'));
+
+      function convertLength(length, from, to) {
+        let unit = ''
+
+        from !== 'miles' && from !== 'km' ?
+        unit = from :
+        to !== 'miles' && to !== 'km' ?
+        unit = to : 'a'
+
+        if ((from !== 'km') && (from !== 'miles') && (to !== 'km') && (to !== 'miles')) {
+          unit = `${from} and ${to}`;
+        }
+        
+        const result =
+        from === 'km' && to === 'miles' ?
+        length / 1.6 + to :
+        from === 'miles' && to === 'km' ?
+        length * 1.6 + to :
+        from === to ?
+        length + to :
+        `Invalid unit ${unit}` ;
+
+
+        return result;
+      }
+      console.log(convertLength(32, 'km', 'miles'));
+      console.log(convertLength(50, 'miles', 'km'));
+      console.log(convertLength(50, 'miles', 'miles'));
+      console.log(convertLength(50, 'km', 'miles'));
+    </script>
+  </body>
+</html>

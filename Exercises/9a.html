@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <button>9a</button>
+
+    <button class="js-9b-button">9b</button>
+
+    <button onclick="
+      pickSide('heads');
+    ">heads</button>
+    <button onclick="
+      pickSide('tails');
+    ">tails</button>
+    <p></p>
+
+    <input placeholder="Name" onkeydown="
+      if (event.key === 'Enter') {
+        submitName();
+      }
+    ">
+    <button onclick="
+      submitName();
+    ">Submit</button>
+
+    <script>
+      const paragraphText = document.querySelector('p');
+
+      console.log(document.querySelector('button'));
+
+      document.querySelector('.js-9b-button').innerHTML = '9b done!'
+
+      function pickSide(pickedSide) {
+        //document.querySelector('p').innerHTML = `You chose: ${pickedSide}`;
+        paragraphText.innerHTML = `You chose: ${pickedSide}`;
+      }
+
+      function submitName() {
+        //document.querySelector('p').innerHTML = `Your name is: ${document.querySelector('input').value}`
+        paragraphText.innerHTML = `Your name is: ${document.querySelector('input').value}`
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <input placeholder="Type something" onkeyup="changeParagraph();">
+    <P></P>
+    <script>
+      function changeParagraph() {
+        document.querySelector('p').innerHTML = `${document.querySelector('input').value}`
+      }
+    </script>
+  </body>
+</html>

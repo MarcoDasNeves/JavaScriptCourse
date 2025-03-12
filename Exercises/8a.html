@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      const basketballProduct = {
+        name: 'basketball',
+        price: 2095
+      };
+      const tennisProduct = {
+        name: 'tennis ball',
+        price: 895
+      }
+      const baseballProduct = {
+        name: 'baseball ball',
+        price: 1095
+      }
+      console.log(basketballProduct);
+      basketballProduct.price += 500;
+      console.log(basketballProduct);
+      basketballProduct['delivery-time'] = '3 days';
+      console.log(basketballProduct['delivery-time']);
+
+      function comparePrice(product1, product2) {
+        const result = product1.price > product2.price ?
+        product2 : product2.price > product1.price ?
+        product1 : 'Equal price or invalid prompt'
+        return result;
+      }
+
+      function isSameProduct(product1, product2) {
+        result = product1.price === product2.price && product1.name === product2.name ?
+        true : false
+        return result
+      }
+
+      console.log(comparePrice(tennisProduct, baseballProduct));
+
+      console.log(isSameProduct(tennisProduct, baseballProduct));
+
+      let text = 'ッエーイ☆KIHARA KUN YO!';
+      let resultado = text.toLowerCase().repeat(9);
+      console.log(resultado);
+
+      resultado = text.repeat(5).toLowerCase();
+      console.log(resultado);
+    </script>
+  </body>
+</html>
