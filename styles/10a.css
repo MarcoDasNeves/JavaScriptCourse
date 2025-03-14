@@ -1,0 +1,36 @@
+.amazon-button {
+  background-color: rgb(255, 216, 20);
+  border: none;
+  font-family: Arial;
+  font-size: 19px;
+  padding: 6px 45px;
+  border-radius: 23px;
+  padding-top: 10px;
+}
+
+.uber-button-request {
+  color: white;
+  background-color: black;
+  border: none;
+  font-size: 19px;
+  padding: 12px 25px;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+
+.uber-button-schedule {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  font-size: 19px;
+  padding: 12px 25px;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+
+.three-buttons {
+  border: none;
+  font-size: 19px;
+  padding: 10px 15px;
+  border-radius: 7px;
+  background-color: rgb(230, 230, 230);
+}
